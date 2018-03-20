@@ -5,36 +5,51 @@
 
 header {
   position: fixed;
-  width: 100wv;
-  padding: 10px;
-  background-color: grey;
-  /*NAV*/ }
-  header #nav {
+  /*MENU*/ }
+  header #mobileWrapper {
+    padding: 20px 0;
+    background-color: white;
+    border-bottom: 2px solid black;
     width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    /*MENU*/
     /*USERICONS*/ }
-    header #nav #hamburgerIcon {
-      font-size: 70px;
+    header #mobileWrapper #hamburgerIcon {
+      font-size: 30px;
       margin-left: 20px; }
-    header #nav #menu {
-      display: block;
-      background-color: pink;
-      list-style: none;
-      text-align: left; }
-      header #nav #menu a {
-        text-decoration: none; }
-    header #nav #logo {
-      height: 100px; }
-    header #nav #userIcons {
-      font-size: 40px;
-      margin-right: 60px; }
-      header #nav #userIcons #accountIcon {
-        font-size: 40px;
+    header #mobileWrapper #logo {
+      height: 50px; }
+    header #mobileWrapper #userIcons {
+      font-size: 14px;
+      margin-right: 20px; }
+      header #mobileWrapper #userIcons #accountIcon {
+        font-size: 14px;
         margin-left: 30px; }
+  header #menu {
+    background-color: #778ca3;
+    height: 100vh;
+    width: 50vh;
+    /*MAINMENU*/ }
+    header #menu #mainMenu {
+      display: block;
+      list-style: none;
+      text-align: left;
+      /*LI*/ }
+      header #menu #mainMenu li {
+        padding-left: 50px;
+        padding-top: 50px; }
+        header #menu #mainMenu li a {
+          font-size: 16px;
+          font-family: Helvetica;
+          color: white;
+          text-decoration: none; }
+        header #menu #mainMenu li #quote {
+          position: absolute;
+          bottom: 0; }
+        header #menu #mainMenu li #quoteText {
+          font-size: 20px; }
 
 /*HEADER*/
 

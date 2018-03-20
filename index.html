@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, userscalable=no">
     <title>Made It</title>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -9,30 +10,35 @@
   <body>
     <header>
       <nav id="nav">
-        <span id="hamburgerIcon">
-          <i class="fas fa-bars"></i>
-        </span>
+        <div id="mobileWrapper">
+          <span id="hamburgerIcon">
+            <i class="fas fa-bars"></i>
+          </span>
 
-        <ul id="menu">
-          <li> <a href="#">Home</a></li>
-          <li> <a href="#">Artists</a></li>
-          <li> <a href="#">About Us</a></li>
-          <li> <a href="#">Shop</a></li>
-          <li> <a href="#">Contact</a></li>
-        </ul>
+          <div id="logowrapper">
+            <img id="logo" src="images/logo.png" alt="Made It logo">
+          </div>
 
-        <div id="logowrapper">
-          <img id="logo" src="images/logo.png" alt="Made It logo">
+          <div id="userIcons">
+            <span id="cartIcon">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+
+            <span id="accountIcon">
+              <i class="fas fa-user"></i>
+            </span>
+          </div>
         </div>
 
-        <div id="userIcons">
-          <span id="cartIcon">
-            <i class="fas fa-shopping-cart"></i>
-          </span>
-
-          <span id="accountIcon">
-            <i class="fas fa-user"></i>
-          </span>
+        <div id="menu">
+          <ul id="mainMenu">
+            <li> <a href="#">Home</a></li>
+            <li> <a href="#">Artists</a></li>
+            <li> <a href="#">About Us</a></li>
+            <li> <a href="#">Shop</a></li>
+            <li> <a href="#">Contact</a></li>
+            <li id="quote"><p id="quoteText">We Made It. You love it.</p></li>
+          </ul>
         </div>
 
       </nav>

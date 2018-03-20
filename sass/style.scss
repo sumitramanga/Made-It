@@ -1,6 +1,10 @@
 @mixin icon-size {
-  font-size:40px;
+  font-size:14px;
 }
+
+// @mixin @font-face {
+//
+// }
 
 * {
   padding: 0;
@@ -10,10 +14,11 @@
 
 header {
   position: fixed;
-  width: 100wv;
-  padding: 10px;
-  background-color: grey;
-  #nav{
+
+  #mobileWrapper{
+    padding: 20px 0;
+    background-color: white;
+    border-bottom: 2px solid black;
     width: 100vw;
     display: flex;
     flex-direction: row;
@@ -21,34 +26,59 @@ header {
     justify-content: space-between;
 
     #hamburgerIcon {
-      font-size: 70px;
+      font-size: 30px;
       margin-left: 20px;
       // color:green;
     }
 
-    #menu {
-      display: block;
-      background-color: pink;
-      list-style:none;
-      text-align: left;
-
-      a {
-        text-decoration: none;
-      }
-    }/*MENU*/
-
     #logo {
-      height:100px;
+      height:50px;
     }
 
     #userIcons {
       @include icon-size;
-      margin-right: 60px;
+      margin-right: 20px;
 
       #accountIcon {
         @include icon-size;
         margin-left: 30px;
       }
     }/*USERICONS*/
-  }/*NAV*/
+  }
+
+    #menu {
+      background-color: #778ca3;
+      height: 100vh;
+      width: 50vh;
+
+      #mainMenu {
+        display: block;
+        list-style:none;
+        text-align: left;
+
+        li {
+          padding-left: 50px;
+          padding-top: 50px;
+
+        a {
+          font-size: 16px;
+          font-family: Helvetica;
+          color: white;
+          text-decoration: none;
+        }
+
+        #quote {
+          position: absolute;
+          bottom: 0;
+
+        }
+
+        #quoteText {
+          font-size: 20px;
+        }
+
+
+      }/*LI*/
+      }/*MAINMENU*/
+    }/*MENU*/
 }/*HEADER*/
