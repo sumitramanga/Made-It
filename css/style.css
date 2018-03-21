@@ -5,6 +5,7 @@
 
 header {
   position: fixed;
+  /*MOBILEWRAPPER*/
   /*MENU*/ }
   header #mobileWrapper {
     padding: 20px 0;
@@ -26,11 +27,11 @@ header {
       margin-right: 20px; }
       header #mobileWrapper #userIcons #accountIcon {
         font-size: 14px;
-        margin-left: 30px; }
+        margin-left: 20px; }
   header #menu {
     background-color: #778ca3;
     height: 100vh;
-    width: 50vh;
+    width: 100vw;
     /*MAINMENU*/ }
     header #menu #mainMenu {
       display: block;
@@ -38,18 +39,17 @@ header {
       text-align: left;
       /*LI*/ }
       header #menu #mainMenu li {
-        padding-left: 50px;
-        padding-top: 50px; }
+        padding: 20px;
+        border-bottom: 1px solid white; }
         header #menu #mainMenu li a {
           font-size: 16px;
-          font-family: Helvetica;
+          font-family: "Helvetica";
           color: white;
           text-decoration: none; }
-        header #menu #mainMenu li #quote {
-          position: absolute;
-          bottom: 0; }
         header #menu #mainMenu li #quoteText {
-          font-size: 20px; }
+          font-family: "Helvetica";
+          font-size: 14px;
+          height: 40px; }
 
 /*HEADER*/
 

@@ -2,6 +2,11 @@
   font-size:14px;
 }
 
+@mixin font-nav{
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+}
+
 // @mixin @font-face {
 //
 // }
@@ -41,15 +46,15 @@ header {
 
       #accountIcon {
         @include icon-size;
-        margin-left: 30px;
+        margin-left: 20px;
       }
     }/*USERICONS*/
-  }
+  }/*MOBILEWRAPPER*/
 
     #menu {
       background-color: #778ca3;
       height: 100vh;
-      width: 50vh;
+      width: 100vw;
 
       #mainMenu {
         display: block;
@@ -57,28 +62,27 @@ header {
         text-align: left;
 
         li {
-          padding-left: 50px;
-          padding-top: 50px;
+          padding: 20px;
+          border-bottom: 1px solid white;
 
-        a {
-          font-size: 16px;
-          font-family: Helvetica;
-          color: white;
-          text-decoration: none;
-        }
+          a {
+            font-size: 16px;
+            font-family: "Helvetica";
+            color: white;
+            text-decoration: none;
+          }
 
-        #quote {
-          position: absolute;
-          bottom: 0;
+          // #quote {
+          //   position: absolute;
+          //   bottom: 0;
+          // }
 
-        }
-
-        #quoteText {
-          font-size: 20px;
-        }
-
-
-      }/*LI*/
+            #quoteText {
+              font-family: "Helvetica";
+              font-size: 14px;
+              height: 40px;
+            }
+        }/*LI*/
       }/*MAINMENU*/
     }/*MENU*/
 }/*HEADER*/
