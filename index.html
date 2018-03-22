@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Made It</title>
+    <title>Made It | Wellington's home of handmade products and gifts</title>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
@@ -20,34 +20,62 @@
 
           <div id="userIcons">
             <span id="cartIcon"><i class="fas fa-shopping-cart"></i></span>
-
             <span id="accountIcon"><i class="fas fa-user"></i></span>
           </div>
         </div>
 
         <div id="menu">
           <ul id="mainMenu">
-            <li> <a href="#">Home</a></li>
-            <li> <a href="#">Artists</a></li>
-            <li> <a href="#">About Us</a></li>
-            <li> <a href="#">Shop</a></li>
-            <li> <a href="#">Contact</a></li>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="artists.html">Artists</a></li>
+            <li> <a href="aboutUs.html">About Us</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li> <a href="contact.html">Contact</a></li>
             <li id="quote"><p id="quoteText">We Made It. You love it.</p></li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main id="main">
       <div id="containerMainWrapper">
         <div id="containerMain">
           <h1 id="title">Shop for handmade, New Zealand quality gifts Made It has for you.</h1>
-          <button type="button" id="shopButton" name="button">Shop Now</button>
+          <form class="btnShop" method="post">
+            <button type="button" id="shopButton" name="button">Shop Now</button>
+          </form>
         </div>
       </div>
 
-
       <div id="reviewsAndProducts">
+        <div id="reviewsContainer">
+          <div id="reviews">
+            <div class="singularReview" id="review1">
+              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
+              <div class="quoteText">
+                <p>Best shop in Wellington for 1970's babies.</p>
+                <p class="reviewee">- Leah McTaggart</p>
+              </div>
+            </div><!--review1-->
+
+            <div class="singularReview" id="review2">
+              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
+              <div class="quoteText">
+                <p>My favourite shop in Wellington! Amazing New Zealand quality gifts, staff are knowledgable and helpful. You made it WE LOVE IT.</p>
+                <p class="reviewee">- Setaysha Waatea</p>
+              </div>
+            </div><!--review2-->
+
+            <div class="singularReview" id="review3">
+              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
+              <div class="quoteText">
+                <p>First Shop I think of when I need to get presents for people.</p>
+                <p class="reviewee">- Katy Hayward</p>
+              </div>
+            </div><!--review3-->
+          </div><!--reviews-->
+        </div><!--reviewsWrapper-->
+
         <div id="featuredProductsSection">
           <h2 id=featureTitle>Featured Products</h2>
           <div id="productsWrapper">
@@ -79,49 +107,26 @@
             </div><!-- featuredProducts -->
           </div><!-- productsWrapper -->
         </div><!-- featuredProductsSection -->
-
-        <div id="reviewsContainer">
-          <div id="reviews">
-            <div class="singularReview" id="review1">
-              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
-              <div class="quoteText">
-                <p>Best shop in Wellington for 1970's babies.</p>
-                <p class="reviewee">- Leah McTaggart</p>
-              </div>
-            </div><!--review1-->
-
-            <div class="singularReview" id="review2">
-              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
-              <div class="quoteText">
-                <p>My favourite shop in Wellington! Amazing New Zealand quality gifts, staff are knowledgable and helpful. You made it WE LOVE IT.</p>
-                <p class="reviewee">- Setaysha Waatea</p>
-              </div>
-            </div><!--review2-->
-
-            <div class="singularReview" id="review3">
-              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
-              <div class="quoteText">
-                <p>First Shop I think of when I need to get presents for people.</p>
-                <p class="reviewee">- Katy Hayward</p>
-              </div>
-            </div><!--review3-->
-          </div><!--reviews-->
-        </div><!--reviewsWrapper-->
       </div><!--reviewsAndProducts-->
+
     </main>
 
     <footer id="footer">
       <div id="socialMediaIcons">
-        <div class="socialIcon" id="facebookIcon"><i class="fab fa-facebook-f fa-2x"></i></div>
-          <div class="socialIcon" id="twitterIcon"><i class="fab fa-twitter fa-2x"></i></div>
-        <div class="socialIcon" id="instagramIcon"><i class="fab fa-instagram fa-2x"></i></div>
-      </div>
+        <div class="socialIcon" id="facebookIcon">
+          <a href="https://www.facebook.com/made.it.WGTN/"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="socialIcon" id="twitterIcon">
+            <a href="https://twitter.com/MadeitWGTN"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="socialIcon" id="instagramIcon">
+          <a href="https://www.instagram.com/made_it_nz/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div><!--socialMediaIcon-->
       <div id="copyright"><p>© 2018 Made It. All rights reserved.</p></div>
     </footer>
 
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/script.js"></script>
-
-
   </body>
 </html>

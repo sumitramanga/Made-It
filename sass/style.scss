@@ -22,12 +22,13 @@ $mainColor: #59B28F;
 }
 
 @mixin cta-button {
-  font-size: 16px;
+  font-size: 15px;
   text-align: center;
-  padding: 14px 35px;
+  padding: 14px 36px;
   color: white;
   background-color: $mainColor;
   border: none;
+  border-radius: 5px;
 }
 
 @mixin img-style {
@@ -85,7 +86,7 @@ $mainColor: #59B28F;
       display: none;
       height: 100vh;
       width: 100vw;
-      background-color: #778ca3;
+      background-color: $mainColor;
 
       #mainMenu {
         display: block;
@@ -108,14 +109,14 @@ $mainColor: #59B28F;
               font-size: 14px;
               height: 36vh;
               position: relative;
-              top: 0;
+              top: 187px;
             }
         }/*LI*/
       }/*MAINMENU*/
     }/*MENU*/
 }/*HEADER*/
 
-main {
+#main {
   position: relative;
   top: 75px;
 
@@ -146,6 +147,41 @@ main {
     }/*CONTAINERMAIN*/
   }/*CONTAINERMAINWRAPPER*/
 
+  #reviewsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 75vw;
+    margin: 2em auto;
+
+    #reviews {
+
+      #review3 {
+        display: none;
+      }
+      .singularReview {
+        margin-bottom: 2.5em;
+        width: 78vw;
+
+        .quoteIcon {
+          color: $mainColor;
+          font-size: 32px;
+        }
+
+        .quoteText {
+          @include review-font;
+          padding-left: 37px;
+        }
+
+        .reviewee {
+          font-style: normal;
+          font-weight: bold;
+        }
+      }/*SINGULARREVIEW*/
+    }/*REVIEWS*/
+  }/*REVIEWSCONTAINER*/
+
   #featureTitle {
     font-family: "Lato", sans-serif;
     font-size: 20px;
@@ -162,6 +198,10 @@ main {
     padding-top: 30px;
     margin-left: 21px;
     margin-right: 21px;
+
+    #product3 {
+      display:none;
+    }
 
       .productImg {
         @include img-style;
@@ -194,45 +234,13 @@ main {
           }
         }/*DETAILS*/
   }/*PRODUCTSWRAPPER*/
-
-  #reviewsContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 75vw;
-    margin: 2em auto;
-
-    #reviews {
-
-      .singularReview {
-        margin-bottom: 2.5em;
-        width: 78vw;
-
-        .quoteIcon {
-          color: $mainColor;
-          font-size: 32px;
-        }
-
-        .quoteText {
-          @include review-font;
-          padding-left: 37px;
-        }
-
-        .reviewee {
-          font-style: normal;
-          font-weight: bold;
-        }
-      }/*SINGULARREVIEW*/
-    }/*REVIEWS*/
-  }/*REVIEWSCONTAINER*/
 }/*MAIN*/
 
 #footer {
-	background-color: pink;
+	background-color: $mainColor;
 	width: 100vw;
-	padding: 18px 0;
-  margin-top: 20%;
+	padding: 26px 0;
+  margin-top: 30%;
 
 	#socialMediaIcons {
 		display: flex;
@@ -241,13 +249,24 @@ main {
 		margin-bottom: 13px;
 
 		.socialIcon {
-				margin: 0 10px;
+				margin: 0 0.5em;
+        font-size: 25px;
+        color: white;
+
+        a:visited {
+          color: white;
+        }
+
+        a:hover {
+          color: lightGrey;
+        }
 		}
 	} /*socialMediaIcons*/
 
   #copyright {
     font-family: "Lato", sans-serif;
-    font-size: 12px;
+    font-size: 13px;
 		text-align: center;
+    color: white;
 	}
 }/*footer*/
