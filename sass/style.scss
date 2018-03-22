@@ -1,6 +1,5 @@
-@mixin main-color {
-  color: #59B28F;
-}
+$mainColor: #59B28F;
+
 
 @mixin icon-size {
   font-size:18px;
@@ -19,7 +18,7 @@
 
 @mixin price-font {
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 @mixin cta-button {
@@ -27,7 +26,7 @@
   text-align: center;
   padding: 14px 35px;
   color: white;
-  background-color: #59B28F;
+  background-color: $mainColor;
   border: none;
 }
 
@@ -38,7 +37,7 @@
 
 @mixin review-font {
   font-family: "Lato", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-style: oblique;
 }
 
@@ -120,6 +119,7 @@ main {
   position: relative;
   top: 75px;
 
+
   #containerMainWrapper {
     display: flex;
     align-items: center;
@@ -141,7 +141,7 @@ main {
 
       #shopButton {
         @include cta-button;
-        margin: 0 87px;
+        margin: 0 86px;
       }
     }/*CONTAINERMAIN*/
   }/*CONTAINERMAINWRAPPER*/
@@ -210,13 +210,13 @@ main {
         width: 78vw;
 
         .quoteIcon {
-          @include main-color;
+          color: $mainColor;
           font-size: 32px;
         }
 
         .quoteText {
           @include review-font;
-          padding-left: 40px;
+          padding-left: 37px;
         }
 
         .reviewee {
@@ -227,3 +227,27 @@ main {
     }/*REVIEWS*/
   }/*REVIEWSCONTAINER*/
 }/*MAIN*/
+
+#footer {
+	background-color: pink;
+	width: 100vw;
+	padding: 18px 0;
+  margin-top: 20%;
+
+	#socialMediaIcons {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 13px;
+
+		.socialIcon {
+				margin: 0 10px;
+		}
+	} /*socialMediaIcons*/
+
+  #copyright {
+    font-family: "Lato", sans-serif;
+    font-size: 12px;
+		text-align: center;
+	}
+}/*footer*/
