@@ -6,28 +6,22 @@
     <title>Made It</title>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav id="nav">
         <div id="mobileWrapper">
-          <span id="hamburgerIcon">
-            <i class="fas fa-bars"></i>
-          </span>
+          <span id="hamburgerIcon"><i class="fas fa-bars"></i></span>
 
           <div id="logowrapper">
             <img id="logo" src="images/logo.png" alt="Made It logo">
           </div>
 
           <div id="userIcons">
-            <span id="cartIcon">
-              <i class="fas fa-shopping-cart"></i>
-            </span>
+            <span id="cartIcon"><i class="fas fa-shopping-cart"></i></span>
 
-            <span id="accountIcon">
-              <i class="fas fa-user"></i>
-            </span>
+            <span id="accountIcon"><i class="fas fa-user"></i></span>
           </div>
         </div>
 
@@ -46,15 +40,82 @@
 
     <main>
       <div id="containerMainWrapper">
-      <div id="containerMain">
-        <h2 id="title">Shop for handmade, New Zealand quality gifts Made It has for you.</h2>
-        <button type="button" id="shopButton" name="button">Shop Now</button>
+        <div id="containerMain">
+          <h1 id="title">Shop for handmade, New Zealand quality gifts Made It has for you.</h1>
+          <button type="button" id="shopButton" name="button">Shop Now</button>
+        </div>
       </div>
 
-    </div>
+
+      <div id="reviewsAndProducts">
+        <div id="featuredProductsSection">
+          <h2 id=featureTitle>Featured Products</h2>
+          <div id="productsWrapper">
+            <div id="featuredProducts">
+
+              <div id="product1" class="individualProduct">
+                <div id="productImg1" class="productImg"></div>
+                <div class="details">
+                  <h4 class="productTitle">Featured Product</h4>
+                  <p class="price">$29.99</p>
+                </div>
+              </div><!--product1-->
+
+              <div id="product2" class="individualProduct">
+                <div id="productImg2" class="productImg"></div>
+                <div class="details">
+                  <h4 class="productTitle">Featured Product</h4>
+                  <p class="price">$29.99</p>
+                </div>
+              </div><!--product2-->
+
+              <div id="product3" class="individualProduct">
+                <div id="productImg3" class="productImg"></div>
+                  <div class="details">
+                    <h4 class="productTitle">Featured Product</h4>
+                    <p class="price">$29.99</p>
+                  </div>
+              </div><!--product3-->
+            </div><!-- featuredProducts -->
+          </div><!-- productsWrapper -->
+        </div><!-- featuredProductsSection -->
+
+        <div id="reviewsContainer">
+          <div id="reviews">
+            <div class="singularReview" id="review1">
+              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
+              <div class="quoteText">
+                <p>Best shop in Wellington for 1970's babies.</p>
+                <p class="reviewee">- Leah McTaggart</p>
+              </div>
+            </div><!--review1-->
+
+            <div class="singularReview" id="review2">
+              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
+              <div class="quoteText">
+                <p>My favourite shop in Wellington! Amazing New Zealand quality gifts, staff are knowledgable and helpful. You made it WE LOVE IT.</p>
+                <p class="reviewee">- Setaysha Waatea</p>
+              </div>
+            </div><!--review2-->
+
+            <div class="singularReview" id="review3">
+              <span class="quoteIcon"><i class="fas fa-quote-left "></i></span>
+              <div class="quoteText">
+                <p>First Shop I think of when I need to get presents for people.</p>
+                <p class="reviewee">- Katy Hayward</p>
+              </div>
+            </div><!--review3-->
+          </div><!--reviews-->
+        </div><!--reviewsWrapper-->
+      </div><!--reviewsAndProducts-->
     </main>
 
-    <footer>
+    <footer id="footer">
+      <div class="socialMediaIcons">
+        <div class="socialIcon" id="facebookIcon"></div>
+        <div class="socialIcon" id="instagramIcon"></div>
+      </div>
+      <div id="copyright"><p>© 2018 Made It. All rights reserved.</p></div>
     </footer>
 
   </body>
