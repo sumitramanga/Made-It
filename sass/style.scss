@@ -270,3 +270,23 @@ $mainColor: #59B28F;
     color: white;
 	}
 }/*footer*/
+/*END OF BASE*/
+
+@media only screen and (min-width: 768px) { /*TABLET*/
+
+  #main {
+    #productsWrapper {
+
+
+      #featuredProducts{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 93vw;
+      }
+      #product3 {
+        display: block;
+      }
+    }/*PRODUCTSWRAPPER*/
+  }/*MAIN*/
+}/*MEDIA QUERY FOR TABLET*/

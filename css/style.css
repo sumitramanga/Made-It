@@ -179,5 +179,20 @@
     color: white; }
 
 /*footer*/
+/*END OF BASE*/
+@media only screen and (min-width: 768px) {
+  /*TABLET*/
+  #main {
+    /*PRODUCTSWRAPPER*/ }
+    #main #productsWrapper #featuredProducts {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 93vw; }
+    #main #productsWrapper #product3 {
+      display: block; }
+
+  /*MAIN*/ }
+/*MEDIA QUERY FOR TABLET*/
 
 /*# sourceMappingURL=style.css.map */
