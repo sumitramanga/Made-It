@@ -17,15 +17,17 @@
     background-color: white;
     border-bottom: 1px solid black;
     width: 100vw;
+    height: 12vh;
     /*USERICONS*/ }
     #nav #mobileWrapper #hamburgerIcon {
       font-size: 30px;
-      margin-left: 20px; }
+      margin-left: 6%; }
     #nav #mobileWrapper #logo {
-      height: 50px; }
+      height: 6vh;
+      /*33px*/ }
     #nav #mobileWrapper #userIcons {
       font-size: 18px;
-      margin-right: 20px; }
+      margin-right: 6%; }
       #nav #mobileWrapper #userIcons #accountIcon {
         font-size: 18px;
         margin-left: 20px; }
@@ -33,7 +35,6 @@
     display: none;
     height: 100vh;
     width: 100vw;
-    background-color: #59B28F;
     /*MAINMENU*/ }
     #nav #menu #mainMenu {
       display: block;
@@ -42,7 +43,10 @@
       /*LI*/ }
       #nav #menu #mainMenu li {
         padding: 16px;
+        background-color: #59B28F;
         border-bottom: 1px solid white; }
+        #nav #menu #mainMenu li #quote {
+          height: 100vh; }
         #nav #menu #mainMenu li a {
           font-family: "Helvetica";
           font-size: 16px;
@@ -51,11 +55,11 @@
         #nav #menu #mainMenu li #quoteText {
           font-family: "Helvetica";
           font-size: 14px;
-          height: 36vh;
+          height: 100vh;
           position: relative;
           top: 187px; }
 
-/*HEADER*/
+/*NAV*/
 #main {
   position: relative;
   top: 75px;
@@ -64,29 +68,35 @@
   /*PRODUCTSWRAPPER*/ }
   #main #containerMainWrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
     height: 87vh;
     width: 100vw;
     background-image: url("../images/tableView.jpg");
     background-size: cover;
     background-position: center;
     /*CONTAINERMAIN*/ }
-    #main #containerMainWrapper #containerMain #title {
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-family: Palatino;
-      font-weight: lighter; }
-    #main #containerMainWrapper #containerMain #shopButton {
-      font-size: 15px;
-      text-align: center;
-      padding: 14px 36px;
-      color: white;
-      background-color: #59B28F;
-      border: none;
-      border-radius: 5px;
-      margin: 0 86px; }
+    #main #containerMainWrapper #containerMain {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw; }
+      #main #containerMainWrapper #containerMain #title {
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-family: Palatino;
+        font-weight: lighter;
+        margin-bottom: 3%; }
+      #main #containerMainWrapper #containerMain #shopButton {
+        font-family: "Lato", sans-serif;
+        font-size: 15px;
+        text-align: center;
+        text-decoration: none;
+        padding: 14px 36px;
+        color: white;
+        background-color: #59B28F;
+        border: none;
+        border-radius: 5px; }
   #main #reviewsContainer {
     display: flex;
     flex-direction: column;
@@ -182,17 +192,74 @@
 /*END OF BASE*/
 @media only screen and (min-width: 768px) {
   /*TABLET*/
-  #main {
-    /*PRODUCTSWRAPPER*/ }
-    #main #productsWrapper #featuredProducts {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 93vw; }
-    #main #productsWrapper #product3 {
-      display: block; }
+  #nav {
+    /*MOBILEWRAPPER*/
+    /*MENU*/ }
+    #nav #mobileWrapper {
+      /*USERICONS*/ }
+      #nav #mobileWrapper #hamburgerIcon {
+        font-size: 43px; }
+      #nav #mobileWrapper #userIcons span {
+        font-size: 27px !important; }
+    #nav #menu {
+      height: 25vh;
+      /*MAINMENU*/ }
+      #nav #menu #mainMenu li {
+        text-align: center; }
+      #nav #menu #mainMenu li:last-child {
+        display: none; }
 
-  /*MAIN*/ }
+  /*NAV*/
+  #main {
+    /*containerMainWrapper*/
+    /*reviewsContainer*/
+    /*PRODUCTSWRAPPER*/ }
+    #main #containerMainWrapper {
+      height: 95vh; }
+    #main #reviewsContainer {
+      /*reviews*/ }
+      #main #reviewsContainer #reviews .singularReview {
+        width: 43vw; }
+      #main #reviewsContainer #reviews #review2 {
+        margin-bottom: 0; }
+    #main #productsWrapper {
+      margin: 0; }
+      #main #productsWrapper #featuredProducts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100vw; }
+      #main #productsWrapper #product3 {
+        display: block; }
+
+  /*MAIN*/
+  #footer {
+    margin-top: 14%; } }
 /*MEDIA QUERY FOR TABLET*/
+@media only screen and (min-width: 1336px) {
+  /*DESKTOP*/
+  #nav {
+    /*MOBILEWRAPPER*/
+    /*MENU*/ }
+    #nav #mobileWrapper {
+      background-color: transparent;
+      border-bottom: none;
+      width: 100vw; }
+      #nav #mobileWrapper #hamburgerIcon {
+        display: none; }
+    #nav #menu {
+      display: inline-block !important;
+      /*MAINMENU*/ }
+      #nav #menu #mainMenu {
+        float: right;
+        margin-top: 12px; }
+        #nav #menu #mainMenu li {
+          display: inline-block;
+          border-bottom: none; }
+
+  /*NAV*/
+  #main {
+    position: static; } }
+/*END OF DESKTOP MEDIA QUERY*/
 
 /*# sourceMappingURL=style.css.map */
