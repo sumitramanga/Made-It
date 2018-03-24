@@ -107,7 +107,6 @@ $tableticonFont-Size: 27px;
             font-size: 16px;
             color: white;
             text-decoration: none;
-
           }
 
             #quoteText {
@@ -132,6 +131,7 @@ $tableticonFont-Size: 27px;
     height: 87vh;
     width: 100vw;
     background-image: url("../images/tableView.jpg");
+    background-attachment: fixed;
     @include img-style;
 
     #containerMain {
@@ -213,8 +213,8 @@ $tableticonFont-Size: 27px;
 
       .productImg {
         @include img-style;
-        width:230px;
-        height:230px;
+        width: 230px;
+        height: 230px;
       }
 
       #productImg1 {
@@ -310,7 +310,7 @@ $tableticonFont-Size: 27px;
 
   #main {
     #containerMainWrapper {
-      height: 95vh;
+      height: 100vh;
     }/*containerMainWrapper*/
 
     #reviewsContainer {
@@ -341,32 +341,49 @@ $tableticonFont-Size: 27px;
   }/*MAIN*/
 
   #footer {
-    margin-top: 14%
+    margin-top: 14%;
   }
 }/*MEDIA QUERY FOR TABLET*/
 
 @media only screen and (min-width: 1336px) { /*DESKTOP*/
   #nav {
+    height: 13vh;
+    margin-top: 3%;
+
     #mobileWrapper {
+        width: 67vw;
         background-color: transparent;
         border-bottom: none;
-        width: 100vw;
-
+        margin: 0 auto;
 
       #hamburgerIcon {
         display: none;
       }
+
+      #userIcons {
+        margin-right: 0;
+        color: $mainColor;
+      }
     }/*MOBILEWRAPPER*/
 
     #menu {
-      display: inline-block !important;
+      display: block !important;
+      position: relative;
+      right: 38%;
+      bottom: 85px;
+      height: 8vh;
 
       #mainMenu {
-        float:right;
-        margin-top:12px;
+        float: right;
+        margin-top: 12px;
         li {
           display: inline-block;
+          background-color: transparent;
           border-bottom: none;
+
+          a {
+            color: darkGrey;
+          }
         }
       }/*MAINMENU*/
     }/*MENU*/
@@ -374,5 +391,46 @@ $tableticonFont-Size: 27px;
 
   #main {
     position: static;
+    background-color: lightGrey;
+
+    #reviewsContainer {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      #reviews {
+        width: 58vw;
+        border: 10px solid white;
+        .singularReview {
+          margin: 0 auto;
+          width: 57vw;
+          padding: 4% 30%;
+        }
+
+        #review1 {
+          background-color: white;
+        }
+        #review3 {
+          display: block;
+          margin-bottom: 0;
+          background-color: white;
+        }
+      }
+    }
+
+    #featuredProductsSection {
+      margin: 0 21%;
+      border: 10px solid white;
+    }
+    #productsWrapper {
+      padding: 0;
+      // margin-left: 25px;
+      // margin-right: 25px;
+      #featuredProducts {
+        justify-content: space-around;
+      }
+    }
+  }
+  #footer {
+    margin-top: 0;
   }
 }/*END OF DESKTOP MEDIA QUERY*/

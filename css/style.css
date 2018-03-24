@@ -71,6 +71,7 @@
     height: 87vh;
     width: 100vw;
     background-image: url("../images/tableView.jpg");
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
     /*CONTAINERMAIN*/ }
@@ -215,7 +216,7 @@
     /*reviewsContainer*/
     /*PRODUCTSWRAPPER*/ }
     #main #containerMainWrapper {
-      height: 95vh; }
+      height: 100vh; }
     #main #reviewsContainer {
       /*reviews*/ }
       #main #reviewsContainer #reviews .singularReview {
@@ -239,27 +240,67 @@
 @media only screen and (min-width: 1336px) {
   /*DESKTOP*/
   #nav {
+    height: 13vh;
+    margin-top: 3%;
     /*MOBILEWRAPPER*/
     /*MENU*/ }
     #nav #mobileWrapper {
+      width: 67vw;
       background-color: transparent;
       border-bottom: none;
-      width: 100vw; }
+      margin: 0 auto; }
       #nav #mobileWrapper #hamburgerIcon {
         display: none; }
+      #nav #mobileWrapper #userIcons {
+        margin-right: 0;
+        color: #59B28F; }
     #nav #menu {
-      display: inline-block !important;
+      display: block !important;
+      position: relative;
+      right: 38%;
+      bottom: 85px;
+      height: 8vh;
       /*MAINMENU*/ }
       #nav #menu #mainMenu {
         float: right;
         margin-top: 12px; }
         #nav #menu #mainMenu li {
           display: inline-block;
+          background-color: transparent;
           border-bottom: none; }
+          #nav #menu #mainMenu li a {
+            color: darkGrey; }
 
   /*NAV*/
   #main {
-    position: static; } }
+    position: static;
+    background-color: lightGrey; }
+    #main #reviewsContainer {
+      margin-top: 0;
+      margin-bottom: 0; }
+      #main #reviewsContainer #reviews {
+        width: 58vw;
+        border: 10px solid white; }
+        #main #reviewsContainer #reviews .singularReview {
+          margin: 0 auto;
+          width: 57vw;
+          padding: 4% 30%; }
+        #main #reviewsContainer #reviews #review1 {
+          background-color: white; }
+        #main #reviewsContainer #reviews #review3 {
+          display: block;
+          margin-bottom: 0;
+          background-color: white; }
+    #main #featuredProductsSection {
+      margin: 0 21%;
+      border: 10px solid white; }
+    #main #productsWrapper {
+      padding: 0; }
+      #main #productsWrapper #featuredProducts {
+        justify-content: space-around; }
+
+  #footer {
+    margin-top: 0; } }
 /*END OF DESKTOP MEDIA QUERY*/
 
 /*# sourceMappingURL=style.css.map */
