@@ -2,7 +2,7 @@ $mainColor: #59B28F;
 $titlefontColor: #47525E;
 $bodyfontColor: #8190A5;
 $mainFont-Family: "Lato", sans-serif;
-$mobileiconFont-Size:18px;
+$mobileiconFont-Size: 18px;
 $tableticonFont-Size: 27px;
 
 @mixin font-nav {
@@ -97,7 +97,7 @@ $tableticonFont-Size: 27px;
     }
 
     #logo {
-      height: 6vh; /*33px*/
+      height: 6vh;
     }
 
     #userIcons {
@@ -326,7 +326,31 @@ $tableticonFont-Size: 27px;
   }/*ARTISTSECTION*/
 
 /*ABOUT US PAGE*/
+  #aboutUsSection {
+    #imgOfProductMakingWrapper {
 
+      #imgOfProductMaking {
+        @include img-style;
+        width: 100%;
+        height: 230px;
+        background-image: url(../images/makingProduct.jpg);
+      }
+    }/*imgOfProductMakingWrapper*/
+      .aboutStaffText {
+        @include bodyFontFace;
+        margin: 2em;
+      }
+
+      .aboutUsImages {
+        width: 100vw;
+        height: 50vh;
+        object-fit: cover;
+      }
+
+     #row2, #row3 {
+      display: none;
+    }
+  }/*aboutUsSection*/
 }/*MAIN*/
 
 #footer {
@@ -476,7 +500,7 @@ $tableticonFont-Size: 27px;
 
   #main {
     position: static;
-    background-color: lightGrey;
+    background-color: #E8EAED;
 
     #reviewsContainer {
       margin-top: 0;
