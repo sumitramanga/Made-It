@@ -1,25 +1,52 @@
 $mainColor: #59B28F;
+$titlefontColor: #47525E;
+$bodyfontColor: #8190A5;
+$mainFont-Family: "Lato", sans-serif;
 $mobileiconFont-Size:18px;
 $tableticonFont-Size: 27px;
 
 @mixin font-nav {
-  font-family: "Lato", sans-serif;
+  font-family: $mainFont-Family;
   font-size: 16px;
 }
 
+@mixin mainTitle {
+  padding: 20px;
+  text-align: center;
+  font-family: Palatino;
+  font-weight: lighter;
+  margin-bottom: 3%;
+  color: $titlefontColor
+}
+
+@mixin artistTitle {
+  font-family: $mainFont-Family;
+  color: $titlefontColor;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@mixin bodyFontFace {
+  font-family: $mainFont-Family;
+  color: $bodyfontColor;
+  font-size: 14px;
+}
+
 @mixin product-title-font {
-  font-family: "Lato", sans-serif;
+  font-family: $mainFont-Family;
+  color: $titlefontColor;
   font-size: 16px;
   font-weight: 700;
 }
 
 @mixin price-font {
-  font-family: "Lato", sans-serif;
+  font-family: $mainFont-Family;
+  color: $bodyfontColor;
   font-size: 14px;
 }
 
 @mixin cta-button {
-  font-family: "Lato", sans-serif;
+  font-family: $mainFont-Family;
   font-size: 15px;
   text-align: center;
   text-decoration: none;
@@ -37,7 +64,8 @@ $tableticonFont-Size: 27px;
 }
 
 @mixin review-font {
-  font-family: "Lato", sans-serif;
+  font-family: $mainFont-Family;
+  color: $bodyfontColor;
   font-size: 15px;
   font-style: oblique;
 }
@@ -58,7 +86,7 @@ $tableticonFont-Size: 27px;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
-    background-color: white;
+    background-color: #8190A5;
     border-bottom: 1px solid black;
     width: 100vw;
     height: 12vh;
@@ -98,24 +126,24 @@ $tableticonFont-Size: 27px;
           background-color: $mainColor;
           border-bottom: 1px solid white;
 
-          #quote {
+        #quote {
             height: 100vh;
           }
 
-          a {
-            font-family: "Helvetica";
-            font-size: 16px;
-            color: white;
-            text-decoration: none;
-          }
+        a {
+          font-family: "Helvetica";
+          font-size: 16px;
+          color: white;
+          text-decoration: none;
+        }
 
-            #quoteText {
-              font-family: "Helvetica";
-              font-size: 14px;
-              height: 100vh;
-              position: relative;
-              top: 187px;
-            }
+          #quoteText {
+            font-family: "Helvetica";
+            font-size: 14px;
+            height: 100vh;
+            position: relative;
+            top: 187px;
+          }
         }/*LI*/
       }/*MAINMENU*/
     }/*MENU*/
@@ -123,12 +151,11 @@ $tableticonFont-Size: 27px;
 
 #main {
   position: relative;
-  top: 75px;
-
+  top: 68px;
 
   #containerMainWrapper {
     display: flex;
-    height: 87vh;
+    height: 88vh;
     width: 100vw;
     background-image: url("../images/tableView.jpg");
     background-attachment: fixed;
@@ -142,12 +169,8 @@ $tableticonFont-Size: 27px;
       width: 100vw;
 
       #title {
+        @include mainTitle;
         color: white;
-        padding: 20px;
-        text-align: center;
-        font-family: Palatino;
-        font-weight: lighter;
-        margin-bottom: 3%;
       }
 
       #shopButton {
@@ -208,7 +231,7 @@ $tableticonFont-Size: 27px;
     margin-right: 21px;
 
     #product3 {
-      display:none;
+      display: none;
     }
 
       .productImg {
@@ -229,7 +252,7 @@ $tableticonFont-Size: 27px;
         background-image: url(../images/kidsitem.jpg);
       }
 
-        .details {
+      .details {
           margin-top: 15px;
           margin-bottom: 20px;
 
@@ -242,6 +265,68 @@ $tableticonFont-Size: 27px;
           }
         }/*DETAILS*/
   }/*PRODUCTSWRAPPER*/
+
+/*ARTIST PAGE*/
+  #mainTitle {
+    color: black;
+    @include mainTitle;
+    margin-bottom: 0;
+  }
+
+  #collabSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #ctaPhraseWrapper {
+      #ctaPhrase {
+        @include mainTitle;
+        font-family: $mainFont-Family;
+        font-size: 19px;
+        padding-top: 0;
+      }
+    }/*ctaPhraseWrapper*/
+    #btnWrapper {
+      margin-bottom: 2em;
+      #collabButton {
+        @include cta-button;
+        padding: 11px 32px;
+      }
+    } /*COLLABSECTION*/
+  } /*MAINTITLE*/
+
+  #artistsSection {
+    width: 90vw;
+    margin: 0 auto;
+
+    .singularArtist {
+      margin-bottom: 9%;
+      .artistImgWrapper {
+        width: 90vw;
+        height: 90vw;
+
+        img {
+          width: 90vw;
+          height: 90vw;
+          object-fit: cover;
+        }
+      }/*ARTISTIMGWRAPPER*/
+      .artistDetailsWrapper {
+        width: 90vw;
+        margin-top: 4%;
+
+        .artistName {
+          @include artistTitle;
+        }
+        .artistDescription {
+          @include bodyFontFace;
+          margin-top: 2%;
+        }
+      }/*ARTISTDETAILSWRAPPER*/
+    }/*SINGULARARTIST*/
+  }/*ARTISTSECTION*/
+
+/*ABOUT US PAGE*/
+
 }/*MAIN*/
 
 #footer {
@@ -266,9 +351,9 @@ $tableticonFont-Size: 27px;
         }
 
         a:hover {
-          color: lightGrey;
+          color: $bodyfontColor;
         }
-		}
+		}/*socialIcon*/
 	} /*socialMediaIcons*/
 
   #copyright {
@@ -382,9 +467,9 @@ $tableticonFont-Size: 27px;
           border-bottom: none;
 
           a {
-            color: darkGrey;
+            // color: darkGrey;
           }
-        }
+        }/*LI*/
       }/*MAINMENU*/
     }/*MENU*/
   }/*NAV*/
@@ -400,6 +485,7 @@ $tableticonFont-Size: 27px;
       #reviews {
         width: 58vw;
         border: 10px solid white;
+
         .singularReview {
           margin: 0 auto;
           width: 57vw;
@@ -428,8 +514,8 @@ $tableticonFont-Size: 27px;
       #featuredProducts {
         justify-content: space-around;
       }
-    }
-  }
+    }/*productsWrapper*/
+  }/*featuredProductsSection*/
   #footer {
     margin-top: 0;
   }
