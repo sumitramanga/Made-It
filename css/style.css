@@ -69,7 +69,11 @@
   /*MAINTITLE*/
   /*ARTISTSECTION*/
   /*ABOUT US PAGE*/
-  /*aboutUsSection*/ }
+  /*aboutUsSection*/
+  /*SHOPPAGE*/
+  /*PRODUCTSWRAPPER*/
+  /*CONTACT PAGE*/
+  /*CONTACTCONTAINER*/ }
   #main #containerMainWrapper {
     display: flex;
     height: 88vh;
@@ -86,7 +90,7 @@
       justify-content: center;
       width: 100vw; }
       #main #containerMainWrapper #containerMain #title {
-        padding: 20px;
+        padding: 36px 20px;
         text-align: center;
         font-family: Palatino;
         font-weight: lighter;
@@ -172,7 +176,7 @@
         font-size: 14px; }
   #main #mainTitle {
     color: black;
-    padding: 20px;
+    padding: 36px 20px;
     text-align: center;
     font-family: Palatino;
     font-weight: lighter;
@@ -186,7 +190,7 @@
     /*ctaPhraseWrapper*/
     /*COLLABSECTION*/ }
     #main #collabSection #ctaPhraseWrapper #ctaPhrase {
-      padding: 20px;
+      padding: 36px 20px;
       text-align: center;
       font-family: Palatino;
       font-weight: lighter;
@@ -194,7 +198,8 @@
       color: #47525E;
       font-family: "Lato", sans-serif;
       font-size: 19px;
-      padding-top: 0; }
+      padding-top: 0;
+      padding-bottom: 16px; }
     #main #collabSection #btnWrapper {
       margin-bottom: 2em; }
       #main #collabSection #btnWrapper #collabButton {
@@ -230,14 +235,15 @@
           font-family: "Lato", sans-serif;
           color: #47525E;
           font-weight: bold;
-          font-size: 15px; }
+          font-size: 16px; }
         #main #artistsSection .singularArtist .artistDetailsWrapper .artistDescription {
           font-family: "Lato", sans-serif;
           color: #8190A5;
           font-size: 14px;
           margin-top: 2%; }
   #main #aboutUsSection {
-    /*imgOfProductMakingWrapper*/ }
+    width: 85vw;
+    margin: 0 auto; }
     #main #aboutUsSection #imgOfProductMakingWrapper #imgOfProductMaking {
       background-size: cover;
       background-position: center;
@@ -248,20 +254,137 @@
       font-family: "Lato", sans-serif;
       color: #8190A5;
       font-size: 14px;
-      margin: 2em; }
+      margin: 2em 0; }
     #main #aboutUsSection .aboutUsImages {
-      width: 100vw;
+      width: 100%;
       height: 50vh;
       object-fit: cover; }
-    #main #aboutUsSection #row2, #main #aboutUsSection #row3 {
+    #main #aboutUsSection #imgOfLightsWrapper, #main #aboutUsSection #row3 {
       display: none; }
+  #main #shopProductsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    margin-left: 21px;
+    margin-right: 21px;
+    /*DETAILS*/ }
+    #main #shopProductsWrapper .productImg {
+      background-size: cover;
+      background-position: center;
+      width: 230px;
+      height: 230px; }
+    #main #shopProductsWrapper #productImg1 {
+      background-image: url(../images/phone-case.jpg); }
+    #main #shopProductsWrapper #productImg2 {
+      background-image: url(../images/smashPlaceSet.jpg); }
+    #main #shopProductsWrapper #productImg3 {
+      background-image: url(../images/kidsitem.jpg); }
+    #main #shopProductsWrapper #productImg4 {
+      background-image: url(../images/earrings.jpg); }
+    #main #shopProductsWrapper #productImg5 {
+      background-image: url(../images/coat.jpg); }
+    #main #shopProductsWrapper .details {
+      margin-top: 15px;
+      margin-bottom: 20px; }
+      #main #shopProductsWrapper .details .productTitle {
+        font-family: "Lato", sans-serif;
+        color: #47525E;
+        font-size: 16px;
+        font-weight: 700; }
+      #main #shopProductsWrapper .details .price {
+        font-family: "Lato", sans-serif;
+        color: #8190A5;
+        font-size: 14px; }
+  #main #contactcontainer {
+    width: 84vw;
+    margin: 0 auto;
+    /*CONTACTCOLUMN1*/
+    /*CONTACTCOLUMN2*/ }
+    #main #contactcontainer #contactColumn1 {
+      /*CONTACTSOCIALICONS*/ }
+      #main #contactcontainer #contactColumn1 .contactTitles {
+        font-family: "Lato", sans-serif;
+        color: #47525E;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 10px 0; }
+      #main #contactcontainer #contactColumn1 .contactBodyText {
+        font-family: "Lato", sans-serif;
+        color: #8190A5;
+        font-size: 14px; }
+      #main #contactcontainer #contactColumn1 #contactSocialIcons {
+        display: flex;
+        flex-direction: row;
+        margin: 13px 0;
+        float: left;
+        width: 100vw;
+        /*SOCIALICON*/ }
+        #main #contactcontainer #contactColumn1 #contactSocialIcons .socialIcon {
+          margin: 0 0.5em;
+          font-size: 25px;
+          color: #59B28F; }
+          #main #contactcontainer #contactColumn1 #contactSocialIcons .socialIcon a:visited {
+            color: #59B28F; }
+          #main #contactcontainer #contactColumn1 #contactSocialIcons .socialIcon a:hover {
+            color: #8190A5; }
+    #main #contactcontainer #contactColumn2 {
+      /*CONTACTFORM*/ }
+      #main #contactcontainer #contactColumn2 .contactBodyText {
+        font-family: "Lato", sans-serif;
+        color: #8190A5;
+        font-size: 14px; }
+      #main #contactcontainer #contactColumn2 #contactForm {
+        font-family: "Lato", sans-serif;
+        color: #8190A5;
+        font-size: 14px;
+        margin-top: 24px;
+        /*CONTACTREASONS*/
+        /*FORMBUTTONS*/ }
+        #main #contactcontainer #contactColumn2 #contactForm .formTitle {
+          font-family: "Lato", sans-serif;
+          color: #47525E;
+          font-weight: bold;
+          font-size: 16px;
+          font-size: 14px; }
+        #main #contactcontainer #contactColumn2 #contactForm .content {
+          padding: 7px 10px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border: 1px black solid;
+          opacity: 0.2; }
+        #main #contactcontainer #contactColumn2 #contactForm #contactReasons {
+          list-style: none;
+          /*LI*/ }
+          #main #contactcontainer #contactColumn2 #contactForm #contactReasons li {
+            margin: 18px 0; }
+            #main #contactcontainer #contactColumn2 #contactForm #contactReasons li .contactReason {
+              margin-right: 6px; }
+        #main #contactcontainer #contactColumn2 #contactForm #formButtons {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          #main #contactcontainer #contactColumn2 #contactForm #formButtons #sumbitBtn {
+            font-family: "Lato", sans-serif;
+            padding: 11px 51px;
+            margin: 6px 0;
+            background-color: #59B28F;
+            color: white;
+            font-weight: bold;
+            border: none; }
+          #main #contactcontainer #contactColumn2 #contactForm #formButtons #resetBtn {
+            font-family: "Lato", sans-serif;
+            padding: 8px 47px;
+            background-color: #59B28F;
+            color: white;
+            border: none; }
 
 /*MAIN*/
 #footer {
   background-color: #59B28F;
   width: 100vw;
   padding: 26px 0;
-  margin-top: 30%;
+  margin-top: 100px;
   /*socialMediaIcons*/ }
   #footer #socialMediaIcons {
     display: flex;
@@ -368,10 +491,12 @@
   #main {
     position: static;
     background-color: #E8EAED;
+    /*reviewsContainer*/
     /*productsWrapper*/ }
     #main #reviewsContainer {
       margin-top: 0;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      /*reviews*/ }
       #main #reviewsContainer #reviews {
         width: 58vw;
         border: 10px solid white; }

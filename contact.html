@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Made It | Wellington's home of handmade products and gifts</title>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav id="nav">
+        <div id="mobileWrapper">
+          <span id="hamburgerIcon"><i class="fas fa-bars"></i></span>
+
+          <div id="logowrapper">
+            <img id="logo" src="images/logo.png" alt="Made It logo">
+          </div>
+
+          <div id="userIcons">
+            <span id="cartIcon"><i class="fas fa-shopping-cart"></i></span>
+            <span id="accountIcon"><i class="fas fa-user"></i></span>
+          </div>
+        </div>
+
+        <div id="menu">
+          <ul id="mainMenu">
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="artists.html">Artists</a></li>
+            <li> <a href="aboutUs.html">About Us</a></li>
+            <li> <a href="shop.html">Shop</a></li>
+            <li> <a href="contact.html">Contact</a></li>
+            <li id="quote"><p id="quoteText">We Made It. You love it.</p></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1 id="mainTitle">Contact</h1>
+      <div id="contactcontainer">
+        <div id="contactColumn1">
+          <h3 class="contactTitles">Store Details</h3>
+
+          <div id="googleMaps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2997.873754452783!2d174.77368931592076!3d-41.289851979273294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38afd657ec3ce1%3A0xd2e66133e399b98d!2sMade.It!5e0!3m2!1sen!2snz!4v1522096319262" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+
+          <div id="openingHours">
+            <h3 class="contactTitles">Opening Hours</h3>
+            <div class="contactBodyTextWrapper">
+              <p class=contactBodyText>
+                Sunday: 11:00am-4pm<br>
+                Monday-Friday: 10:00am-5:30pm<br>
+                Saturday: 10:00am-5:00pm
+              </p>
+            </div><!--CONTACTBODYTEXTWRAPPER-->
+          </div><!--OPENINGHOURS-->
+          <div id="contactSocialIcons">
+            <div class="socialIcon">
+              <a href="https://www.facebook.com/made.it.WGTN/"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="socialIcon">
+                <a href="https://twitter.com/MadeitWGTN"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="socialIcon">
+              <a href="https://www.instagram.com/made_it_nz/"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div><!--SOCIALICONS-->
+        </div><!--CONTACTCOLUMN1-->
+
+        <div id="contactColumn2">
+          <div id="contactDescriptionWrapper">
+            <p class=contactBodyText>Here at Made It we care about customer and artist collaboration satisfaction. If you have any comments and/or questions please feel free to send us a message below.</p>
+          </div>
+          <form id="contactForm" action="index.html" method="post">
+            <label class="formTitle" for="firstName">Full Name</label><br>
+            <input class="content" type="text" name="Full-Name" autofocus required><br>
+
+            <label class="formTitle" for="email">Email</label><br>
+            <input class="content" type="text" name="Email" required><br>
+
+            <label class="formTitle" for="textarea">Message</label><br>
+            <textarea class="content" rows="8" cols="40"></textarea><br>
+
+            <label class="formTitle" for="contactingreason">Why are you contacting us?</label><br>
+            <ul id="contactReasons">
+              <li><input type="radio" class="contactReason" name="ContactingReasoning" value="I want to collaborate with you"><label for="Collborate">I want to collaborate with you</label></li>
+              <li><input type="radio" class="contactReason" name="ContactingReasoning" value="I have a question"><label for="Question">I have a question</label></li>
+              <li><input type="radio" class="contactReason" name="ContactingReasoning" value="Just saying hi"><label for="Comment">Just saying hi :)</label></li>
+              <li><input type="radio" class="contactReason" name="ContactingReasoning" value="Other"><label for="Collborate">Other</label></li><br>
+            </ul>
+            <div id="formButtons">
+              <button id="sumbitBtn" type="submit" name="button">Submit</button><br>
+              <button id="resetBtn" type="reset" name="reset" value="Reset">Reset</button><br>
+            </div>
+          </form>
+        </div> <!--CONTACTCOLUMN2-->
+      </div><!--CONTACTCONTAINER-->
+    </main>
+
+    <footer id="footer">
+      <div id="socialMediaIcons">
+        <div class="socialIcon" id="facebookIcon">
+          <a href="https://www.facebook.com/made.it.WGTN/"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <div class="socialIcon" id="twitterIcon">
+            <a href="https://twitter.com/MadeitWGTN"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="socialIcon" id="instagramIcon">
+          <a href="https://www.instagram.com/made_it_nz/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div><!--socialMediaIcon-->
+      <div id="copyright"><p>© 2018 Made It. All rights reserved.</p></div>
+    </footer>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

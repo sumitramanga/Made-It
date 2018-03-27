@@ -11,7 +11,7 @@ $tableticonFont-Size: 27px;
 }
 
 @mixin mainTitle {
-  padding: 20px;
+  padding: 36px 20px;
   text-align: center;
   font-family: Palatino;
   font-weight: lighter;
@@ -19,11 +19,11 @@ $tableticonFont-Size: 27px;
   color: $titlefontColor
 }
 
-@mixin artistTitle {
+@mixin secondaryTitle {
   font-family: $mainFont-Family;
   color: $titlefontColor;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 @mixin bodyFontFace {
@@ -283,6 +283,7 @@ $tableticonFont-Size: 27px;
         font-family: $mainFont-Family;
         font-size: 19px;
         padding-top: 0;
+        padding-bottom: 16px;
       }
     }/*ctaPhraseWrapper*/
     #btnWrapper {
@@ -315,7 +316,7 @@ $tableticonFont-Size: 27px;
         margin-top: 4%;
 
         .artistName {
-          @include artistTitle;
+          @include secondaryTitle;
         }
         .artistDescription {
           @include bodyFontFace;
@@ -327,37 +328,186 @@ $tableticonFont-Size: 27px;
 
 /*ABOUT US PAGE*/
   #aboutUsSection {
+    width: 85vw;
+    margin: 0 auto;
     #imgOfProductMakingWrapper {
-
       #imgOfProductMaking {
         @include img-style;
         width: 100%;
         height: 230px;
         background-image: url(../images/makingProduct.jpg);
       }
-    }/*imgOfProductMakingWrapper*/
+    }
+
       .aboutStaffText {
         @include bodyFontFace;
-        margin: 2em;
+        margin: 2em 0;
       }
 
       .aboutUsImages {
-        width: 100vw;
+        width: 100%;
         height: 50vh;
         object-fit: cover;
       }
 
-     #row2, #row3 {
+     #imgOfLightsWrapper, #row3 {
       display: none;
     }
   }/*aboutUsSection*/
+
+/*SHOPPAGE*/
+  #shopProductsWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    margin-left: 21px;
+    margin-right: 21px;
+
+      .productImg {
+        @include img-style;
+        width: 230px;
+        height: 230px;
+      }
+
+      #productImg1 {
+        background-image: url(../images/phone-case.jpg);
+      }
+
+      #productImg2 {
+        background-image: url(../images/smashPlaceSet.jpg);
+      }
+
+      #productImg3 {
+        background-image: url(../images/kidsitem.jpg);
+      }
+
+      #productImg4 {
+        background-image: url(../images/earrings.jpg);
+      }
+
+      #productImg5 {
+        background-image: url(../images/coat.jpg);
+      }
+
+      .details {
+          margin-top: 15px;
+          margin-bottom: 20px;
+
+          .productTitle {
+            @include product-title-font;
+          }
+
+          .price {
+            @include price-font;
+          }
+        }/*DETAILS*/
+  }/*PRODUCTSWRAPPER*/
+
+/*CONTACT PAGE*/
+  #contactcontainer {
+    width: 84vw;
+    margin: 0 auto;
+
+    #contactColumn1 {
+
+      .contactTitles {
+        @include secondaryTitle;
+        margin: 10px 0;
+      }
+      .contactBodyText {
+        @include bodyFontFace;
+      }
+
+      #contactSocialIcons {
+        display: flex;
+  	  	flex-direction: row;
+  	  	margin: 13px 0;
+        float: left;
+        width: 100vw;
+
+      .socialIcon {
+        margin: 0 0.5em;
+        font-size: 25px;
+        color: $mainColor;
+
+        a:visited {
+          color: $mainColor;
+        }
+
+        a:hover {
+          color: $bodyfontColor;
+        }
+      }/*SOCIALICON*/
+    }/*CONTACTSOCIALICONS*/
+    }/*CONTACTCOLUMN1*/
+
+    #contactColumn2 {
+      .contactBodyText {
+        @include bodyFontFace;
+      }
+
+      #contactForm {
+        @include bodyFontFace;
+        margin-top: 24px;
+
+        .formTitle {
+          @include secondaryTitle;
+          font-size: 14px;
+        }
+
+        .content {
+          padding: 7px 10px;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border: 1px black solid;
+          opacity: 0.2
+        }
+
+        #contactReasons {
+          list-style: none;
+          li {
+            margin: 18px 0;
+            .contactReason {
+              margin-right: 6px;
+            }
+          }/*LI*/
+        }/*CONTACTREASONS*/
+
+        #formButtons {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+
+          #sumbitBtn {
+            font-family: $mainFont-Family;
+            padding: 11px 51px;
+            margin: 6px 0;
+            background-color: $mainColor;
+            color: white;
+            font-weight: bold;
+            border: none;
+          }
+
+          #resetBtn {
+            font-family: $mainFont-Family;
+            padding: 8px 47px;
+            background-color: $mainColor;
+            color: white;
+            border: none;
+          }
+        }/*FORMBUTTONS*/
+      }/*CONTACTFORM*/
+    }/*CONTACTCOLUMN2*/
+  }/*CONTACTCONTAINER*/
 }/*MAIN*/
 
 #footer {
 	background-color: $mainColor;
 	width: 100vw;
 	padding: 26px 0;
-  margin-top: 30%;
+  margin-top: 100px;
 
 	#socialMediaIcons {
 		display: flex;
@@ -524,8 +674,8 @@ $tableticonFont-Size: 27px;
           margin-bottom: 0;
           background-color: white;
         }
-      }
-    }
+      }/*reviews*/
+    }/*reviewsContainer*/
 
     #featuredProductsSection {
       margin: 0 21%;
